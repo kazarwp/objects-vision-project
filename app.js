@@ -2,19 +2,24 @@ import firebase from 'firebase/app'
 import 'firebase/storage'
 import {upload} from './upload.js'
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyAi6w4QQ9dxvPz5cWAgkwt1Ne231rG65tM",
-  authDomain: "fe-upload.firebaseapp.com",
-  projectId: "fe-upload",
-  storageBucket: "fe-upload.appspot.com",
-  messagingSenderId: "88071581063",
-  appId: "1:88071581063:web:26caeb285967172a2fb722"
-}
+  apiKey: "AIzaSyBH_-OpMPZPLp_i0m7nPsLyyIv5N_rLUyE",
+  authDomain: "object-vision-b854b.firebaseapp.com",
+  projectId: "object-vision-b854b",
+  storageBucket: "object-vision-b854b.appspot.com",
+  messagingSenderId: "903595349702",
+  appId: "1:903595349702:web:f4f733e08ce150fcdb29c7"
+};
 
 firebase.initializeApp(firebaseConfig)
 
 const storage = firebase.storage()
+
+// const pyFunc = async(url) => {
+//   await loadPyodide({ indexURL : "https://cdn.jsdelivr.net/pyodide/v0.17.0/full/" });
+//   const module = await pyodide.loadPackage(['numpy']);
+//   const result = await module.runPythonAsync('import numpy\nnumpy.random.rand()');
+// }
 
 upload('#file', {
   multi: true,
